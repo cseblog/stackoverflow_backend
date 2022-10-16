@@ -1,0 +1,33 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = [ "derive" ] }
+quick-xml = { version = "0.22", features = [ "serialize" ] }
+xmlJSON = "0.2.0"
+rustc-serialize = "0.3"
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+meilisearch-sdk = "0.17.0"
+futures = "0.3" # To be able to block on async functions if you are not using an async runtime
+memmap2 = "0.5.5"
+lazy_static = "1.4.0"
+actix-web = "4"
+actix-cors = "0.6"
+
+[[bin]]
+name="spliter"
+path= "src/bin/spliter.rs"
+
+[[bin]]
+name="injector"
+path= "src/bin/injector.rs"
+
+[[bin]]
+name="cli"
+path= "src/bin/cli_app.rs"
+
+[[bin]]
+name="webapp"
+path= "src/bin/api_app.rs"

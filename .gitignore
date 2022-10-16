@@ -1,0 +1,8 @@
+/target
+.idea/
+.DS_Store
+.vscode
+.data/
+stackdata
+data/json/
+Cargo.lock
